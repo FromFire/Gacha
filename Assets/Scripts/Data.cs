@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Data : MonoBehaviour
 {
-    SaveEntity saveEntity;
+    public SaveEntity saveEntity;
 
     // Start is called before the first frame update
     void Start()
     {
         // 设置不销毁
+        GameObject.DontDestroyOnLoad(gameObject);
         
         // 读取存档文件
         string savePath = "Save/save";

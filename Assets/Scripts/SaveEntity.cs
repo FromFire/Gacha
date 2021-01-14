@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using System;
+using System.Collections.Generic;
 
 // 已有卡牌情况
 [Serializable]
@@ -16,7 +18,7 @@ public class SaveEntity
 
     //转化为json格式
     public string ToJson () {
-        return JsonUtility.ToJson(entity);
+        return JsonUtility.ToJson(this);
     }
 
     //读取自json格式
