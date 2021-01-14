@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Main : MonoBehaviour
 {
@@ -12,7 +13,11 @@ public class Main : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pointsNumber.text = data.saveEntity.points + "";
+        pointsNumber.text = Data.saveEntity.points + "";
+    }
+
+    public void ToCardBook() {
+        SceneManager.LoadScene("CardBook");
     }
 
     // Update is called once per frame
